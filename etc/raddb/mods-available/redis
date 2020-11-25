@@ -10,14 +10,14 @@
 redis {
 	#  Host where the redis server is located.
 	#  We recommend using ONLY 127.0.0.1 !
-	server = 127.0.0.1
+	server = $ENV{REDIS_HOST}
 
 	#  The default port.
-	port = 6379
+	port = $ENV{REDIS_PORT}
 
 	#  The password used to authenticate to the server.
 	#  We recommend using a strong password.
-#	password = thisisreallysecretandhardtoguess
+#	password = $ENV{REDIS_PASSWORD}
 
 	#  Set connection and query timeout for rlm_redis
 	query_timeout = 5
